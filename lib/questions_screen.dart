@@ -9,6 +9,9 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Text('No questions available.');
+    return Text(
+      'No questions available.',
+      style: TextStyle(color: Colors.white, fontSize: 24),
+    );
   }
 }

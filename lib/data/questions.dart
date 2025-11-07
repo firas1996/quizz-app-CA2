@@ -1,4 +1,4 @@
-import 'package:quizz_app/models/quiz_question.dart';
+import 'package:quizz/models/question.dart';
 
 const questions = [
   QuizQuestion("Which language is used to write Flutter apps?", [
