@@ -17,6 +17,7 @@ class _QuizPageState extends State<QuizPage> {
   void switchScreen() {
     setState(() {
       x = "questions-screen";
+      selectedAnswers = [];
     });
   }
 
@@ -38,7 +39,7 @@ class _QuizPageState extends State<QuizPage> {
       activeScreen = QuestionsScreen(getUserAnswer);
     }
     if (x == "results-screen") {
-      activeScreen = ResultsScreen(selectedAnswers);
+      activeScreen = ResultsScreen(selectedAnswers, switchScreen);
     }
     return MaterialApp(
       home: Scaffold(
