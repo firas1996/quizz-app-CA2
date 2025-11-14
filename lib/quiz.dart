@@ -20,10 +20,10 @@ class _QuizPageState extends State<QuizPage> {
     });
   }
 
+  List<String> selectedAnswers = [];
   @override
   Widget build(BuildContext context) {
     Widget activeScreen = StartScreen(switchScreen);
-    List<String> selectedAnswers = [];
     void getUserAnswer(String answer) {
       selectedAnswers.add(answer);
 
@@ -38,7 +38,7 @@ class _QuizPageState extends State<QuizPage> {
       activeScreen = QuestionsScreen(getUserAnswer);
     }
     if (x == "results-screen") {
-      activeScreen = ResultsScreen();
+      activeScreen = ResultsScreen(selectedAnswers);
     }
     return MaterialApp(
       home: Scaffold(
